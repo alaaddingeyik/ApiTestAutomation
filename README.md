@@ -1,58 +1,68 @@
-📱 AkakceTest - Mobil Uygulama Test Otomasyonu
-Bu proje, Akakce mobil uygulamasının belirli fonksiyonlarını test eden Appium, Selenium, Cucumber ve TestNG tabanlı bir mobil test otomasyon framework'üdür.
-Projede, JUnit, WebDriverManager, Maven ve Cucumber BDD kullanılarak testler yazılmıştır.
+# 🚀 ApiTestAutomation - RESTful API Test Otomasyonu
 
-📌 Proje Amacı
-Bu proje ile: ✔ Akakce mobil uygulamasında arama işlemi gerçekleştirerek, kullanıcıların ürünleri filtreleme ve sıralama sürecini test etmek
-✔ Belirtilen bir ürünün satıcı detaylarını görüntüleme ve doğrulama işlemlerini test etmek
-✔ Test senaryolarını BDD formatında Cucumber ile yönetmek ve raporlamak
+Bu proje, **Restful Booker API**'sini otomatik olarak test etmek için geliştirilmiş bir **API Test Otomasyonu** framework'üdür. **RestAssured, Cucumber BDD, JUnit ve Maven** gibi popüler test araçları kullanılarak API testleri oluşturulmuştur.
 
-Tüm testler Cucumber BDD formatında yazılmış olup Scenario-Driven Testing yaklaşımı uygulanmıştır.
+---
 
-🛠 Kullanılan Teknolojiler & Araçlar
-Teknoloji / Kütüphane	Açıklama
-Java	Test otomasyon dili
-Appium	Mobil uygulama otomasyon aracı
-Selenium	Web elementlerini yönetmek için
-Cucumber BDD	Davranış Odaklı Test Çerçevesi
-TestNG	Test çalıştırıcı framework
-Maven	Bağımlılık yönetimi
-Extent Reports	Test raporlama aracı
-📂 Proje Yapısı
-css
-Kopyala
-Düzenle
-AkakceTest
+## 🎯 Proje Amacı
+
+✅ REST API'leri otomatik olarak test etmek  
+✅ CRUD işlemlerini doğrulamak (**Create, Read, Update, Delete**)  
+✅ **Cucumber BDD** ile davranış odaklı testler oluşturmak  
+✅ **Allure Report** ile detaylı test raporları almak  
+✅ **Dynamic Booking ID** kullanarak testlerin bağımsız olmasını sağlamak  
+
+---
+
+## 🛠 Kullanılan Teknolojiler & Araçlar
+
+| Teknoloji | Açıklama |
+|-----------|---------|
+| ☕ **Java** | Test otomasyon dili |
+| 🔗 **RestAssured** | API testlerini yönetmek için |
+| 🌱 **Cucumber BDD** | Davranış Odaklı Test Çerçevesi |
+| 📌 **JUnit** | Test doğrulama framework'ü |
+| ⚙️ **Maven** | Bağımlılık yönetimi ve build süreci |
+| 📊 **Allure Reports** | Test raporlama aracı |
+
+---
+
+## 📂 Proje Yapısı
+
+
+ApiTest
 │── src
 │   ├── main
 │   │   ├── java
-│   │   │   ├── pages
-│   │   │   │   ├── AkakceHomePage.java
-│   │   │   │   ├── ProductPage.java
-│   │   │   │   ├── SearchPage.java
-│   │   │   │   └── BasePage.java
-│   │   │   ├── util
-│   │   │   │   ├── DriverFactory.java
-│   │   │   │   ├── ElementHelper.java
-│   │   │   │   └── ConfigReader.java
+│   │   │   ├── base
+│   │   │   │   ├── BaseAPI.java
+│   │   │   ├── utilities
+│   │   │   │   ├── ApiUtils.java
 │   ├── test
 │   │   ├── java
-│   │   │   ├── stepDefinitions
-│   │   │   │   ├── AkakceSteps.java
-│   │   │   │   ├── ProductSteps.java
-│   │   │   │   └── SearchSteps.java
+│   │   │   ├── apiTests
+│   │   │   │   ├── BookingAPI.java
 │   │   │   ├── runners
 │   │   │   │   ├── TestRunner.java
+│   │   │   ├── stepDefinitions
+│   │   │   │   ├── BookingSteps.java
 │   │   │   ├── reports
 │   │   │   ├── features
-│   │   │   │   ├── akakce_test.feature
+│   │   │   │   ├── ApiFeatures.feature
 │── pom.xml
 │── README.md
-📌 Açıklamalar
-📂 pages/ → Test edilen uygulamanın farklı sayfalarını temsil eden Page Object Model (POM) yapısı
-📂 util/ → Yardımcı metotlar ve yapılandırma dosyaları
-📂 stepDefinitions/ → Cucumber senaryolarına karşılık gelen adımlar
-📂 runners/ → TestNG ve Cucumber entegrasyonunu sağlayan Test Runner dosyaları
-📂 features/ → Cucumber .feature dosyaları
-📜 pom.xml → Maven bağımlılıkları ve proje konfigürasyonu
-📜 README.md → Proje hakkında detaylı bilgi
+
+
+📌 **Açıklamalar:**  
+- `base/` → API temel yapılarını içeren `BaseAPI` sınıfı  
+- `utilities/` → API isteklerini gönderen yardımcı sınıflar (`ApiUtils.java`)  
+- `apiTests/` → Test sınıfları (`BookingAPI.java`)  
+- `stepDefinitions/` → Cucumber senaryolarına karşılık gelen adımlar  
+- `runners/` → Cucumber ve JUnit entegrasyonunu sağlayan test çalıştırıcı dosyalar  
+- `features/` → `.feature` dosyaları (**Cucumber senaryoları**)  
+- `pom.xml` → **Maven bağımlılık ve proje konfigürasyonu**  
+- `README.md` → **Proje hakkında detaylı bilgi**  
+
+
+
+
